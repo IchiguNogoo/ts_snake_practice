@@ -1,0 +1,66 @@
+// 清除默认样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+// 设置全局字体样式
+body{
+  font: bold 30px monospace;
+}
+// 设置主窗口样式
+#main{
+  width: 700px;
+  height: 550px;
+  background-color: cadetblue;
+  margin: auto;
+  border: 5px solid darkgray;
+  border-radius: 15px;
+
+  // 开启弹性盒模型
+  display: flex;
+  // 设置主轴方向
+  flex-flow: column;
+  // 设置侧轴对齐方式
+  align-items: center;
+  // 设置主轴对齐方式
+  justify-content: space-around;
+
+  // 游戏区域样式
+  #game-area{
+    width: 650px;
+    height: 450px;
+    border: 5px solid #221e1e;
+    position: relative;
+
+    // 设置贪吃蛇样式
+    #snake{
+      &>div{
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        border: 1px solid darkgray; // 设置边框使得每个小方块之间有间隙
+        position: absolute;
+      }
+    }
+    // 设置食物样式
+    #food {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background-color: black;
+    }
+
+  }
+
+  // 积分区样式
+  #scoreboard{
+    width: 700px;
+    height: 40px;
+    display: flex;
+    // 设置主轴对齐方式
+    justify-content: space-around;
+  }
+}
